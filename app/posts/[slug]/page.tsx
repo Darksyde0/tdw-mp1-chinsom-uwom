@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { draftMode } from "next/headers";
 
 import MoreStories from "../../more-stories";
 import Avatar from "../../avatar";
@@ -23,8 +22,7 @@ export default async function PostPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const { isEnabled } = await draftMode();
-  const { post, morePosts } = await getPostAndMorePosts(slug, isEnabled);
+  const { post, morePosts } = await getPostAndMorePosts(slug, false);
 
   return (
     <div className="container mx-auto px-5">
