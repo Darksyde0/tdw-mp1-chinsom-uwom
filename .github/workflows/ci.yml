@@ -13,6 +13,9 @@ on:
   repository_dispatch:
     types:
       - contentful-update
+  # Run automatically every day at midnight UTC
+  schedule:
+    - cron: "0 0 * * *"
 
 permissions:
   contents: read
