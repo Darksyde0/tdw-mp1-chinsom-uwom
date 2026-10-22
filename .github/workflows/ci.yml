@@ -14,8 +14,10 @@ on:
     types:
       - contentful-update
   # Run automatically every day at midnight UTC
-  schedule:
-    - cron: "0 0 * * *"
+  # Scheduled trigger tested successfully on 22 October 2026.
+  # Disabled after verification as required by the assignment.
+  # schedule:
+  #   - cron: "0 0 * * *"
 
 permissions:
   contents: read
